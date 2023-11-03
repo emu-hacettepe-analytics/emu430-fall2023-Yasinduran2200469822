@@ -11,17 +11,17 @@ sidebar: false
 
 ## Employements
 
-1.  Firm
+1.  Firm Vivense, Position sales consultant, year 2023
 
-2.  Firm yyy, position yyy, year yyy
+2.  Firm Tutis Tourism, Position barman, year 2022
 
 ## Internships
 
-1.  Firm aaa, position xx, year xxx
+1.  Firm Nurus, position Summer Internshıp, year 2023
 
-2.  Firm bbb, position yyy, year yyy
 
 # Projects
+1. Firm Nurus,Subject Lean Production, year 2023
 
 # Competencies
 
