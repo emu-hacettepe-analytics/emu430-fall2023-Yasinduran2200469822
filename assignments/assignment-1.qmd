@@ -1,6 +1,4 @@
----
----title: "Assignment 1"
----
+
 
 # Assignment 1
 
@@ -87,3 +85,6 @@ These are some of the key differences between R and Python. The choice between t
 [^2]
 
 [^2]: Chatgbt is used in section b
+
+## c
+
