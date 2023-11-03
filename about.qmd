@@ -19,15 +19,18 @@ sidebar: false
 
 1.  Firm Nurus, position Summer Internshıp, year 2023
 
-
 # Projects
-1. Firm Nurus,Subject Lean Production, year 2023
+
+1.  Firm Nurus,Subject Lean Production, year 2023
 
 # Competencies
 
 R, Quarto, Git, Python
 
 # Hobbies
+
 playing and watching football
+
 # CV
+
 [Yasin's CV](https://drive.google.com/file/d/1F2nZWQG1kv_td7Yp9tZDMrGNwvHpmHi6/view?usp=drive_link)
