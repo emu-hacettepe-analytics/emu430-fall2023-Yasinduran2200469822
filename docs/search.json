@@ -46,14 +46,14 @@
     "href": "assignments/assignment-1.html",
     "title": "Assignment 1",
     "section": "",
-    "text": "1 + 1\n\n[1] 2\n\n\nMy first assignment has 3 parts.\n\n\nThis video discusses the effective integration of R, Python, and Tableau. Presented at the RStudio Global 2022 Conference under the title ‘R, Python, and Tableau: Love Triangle,’ it explains how these three popular data analysis and visualization tools can be used together. The speakers share insights into using the advantages of R and Python in data analysis projects to effectively visualize and analyze data with Tableau. This video provides valuable information for those who want to combine data analysis and visualization tools to conduct more comprehensive analyses.”(Chatgpt is used in this section) ## (b)"
+    "text": "My first assignment has 3 parts.\n\n\nThis video discusses the effective integration of R, Python, and Tableau. Presented at the RStudio Global 2022 Conference under the title ‘R, Python, and Tableau: Love Triangle,’ it explains how these three popular data analysis and visualization tools can be used together. The speakers share insights into using the advantages of R and Python in data analysis projects to effectively visualize and analyze data with Tableau. This video provides valuable information for those who want to combine data analysis and visualization tools to conduct more comprehensive analyses.”\n1\n## (b)"
   },
   {
     "objectID": "assignments/assignment-1.html#a",
     "href": "assignments/assignment-1.html#a",
     "title": "Assignment 1",
     "section": "",
-    "text": "This video discusses the effective integration of R, Python, and Tableau. Presented at the RStudio Global 2022 Conference under the title ‘R, Python, and Tableau: Love Triangle,’ it explains how these three popular data analysis and visualization tools can be used together. The speakers share insights into using the advantages of R and Python in data analysis projects to effectively visualize and analyze data with Tableau. This video provides valuable information for those who want to combine data analysis and visualization tools to conduct more comprehensive analyses.”(Chatgpt is used in this section) ## (b)"
+    "text": "This video discusses the effective integration of R, Python, and Tableau. Presented at the RStudio Global 2022 Conference under the title ‘R, Python, and Tableau: Love Triangle,’ it explains how these three popular data analysis and visualization tools can be used together. The speakers share insights into using the advantages of R and Python in data analysis projects to effectively visualize and analyze data with Tableau. This video provides valuable information for those who want to combine data analysis and visualization tools to conduct more comprehensive analyses.”\n1\n## (b)"
   },
   {
     "objectID": "assignments.html",
@@ -68,5 +68,12 @@
     "title": "My Blog",
     "section": "",
     "text": "This page is under construction.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "assignments/assignment-1.html#footnotes",
+    "href": "assignments/assignment-1.html#footnotes",
+    "title": "Assignment 1",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nChatgbt↩︎"
   }
 ]
