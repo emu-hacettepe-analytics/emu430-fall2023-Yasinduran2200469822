@@ -1,5 +1,3 @@
-
-
 # Assignment 1
 
 My first assignment has 3 parts.
@@ -8,9 +6,9 @@ My first assignment has 3 parts.
 
 This video discusses the effective integration of R, Python, and Tableau. Presented at the RStudio Global 2022 Conference under the title 'R, Python, and Tableau: Love Triangle,' it explains how these three popular data analysis and visualization tools can be used together. The speakers share insights into using the advantages of R and Python in data analysis projects to effectively visualize and analyze data with Tableau. This video provides valuable information for those who want to combine data analysis and visualization tools to conduct more comprehensive analyses."
 
-[^1]
+[^assignment-1-1]
 
-[^1]: Chatgbt
+[^assignment-1-1]: Chatgbt
 
 ## (b)
 
@@ -82,9 +80,8 @@ pythonCopy code
 
 These are some of the key differences between R and Python. The choice between the two depends on the specific use case and personal preference, as both languages have their strengths and weaknesses.
 
-[^2]
+[^assignment-1-2]
 
-[^2]: Chatgbt is used in section b
+[^assignment-1-2]: Chatgbt is used in section b
 
-## c
 

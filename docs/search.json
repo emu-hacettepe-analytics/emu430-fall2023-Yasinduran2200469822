@@ -7,18 +7,46 @@
     "text": "I’m honored to be a member of the [group name] project team.\nBelow, you’ll find a brief summary of our project. To access a detailed project description, please go to https://[your-project-url].\nSummary\n[provide a biref summary of your project]\n\n\n\n Back to top"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to My Analytics Lab",
+    "objectID": "new_docs.html",
+    "href": "new_docs.html",
+    "title": "Untitled",
     "section": "",
-    "text": "Hello! My name is Yasin DURAN.\nThis is my personal webpage.\nPlease stay tuned to follow my works on data analytics, blog posts, and more.\nThis is our template.\n\n\n\n Back to top"
+    "text": "Back to top"
   },
   {
-    "objectID": "assignments/assignment-2.html",
-    "href": "assignments/assignment-2.html",
-    "title": "Assignment 2",
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "My Assignments",
     "section": "",
-    "text": "Assignment 2\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\n Back to top"
+    "text": "On this page, I showcase the assignment I conducted for the Fall 2023 EMU 430 Data Analytics course.\nPlease use left menu to navigate through my assignments.\nThe most recent update to this page was made on Nowember 3, 2023\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "assignments/assignment-1.html",
+    "href": "assignments/assignment-1.html",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "My first assignment has 3 parts.\n\n\nThis video discusses the effective integration of R, Python, and Tableau. Presented at the RStudio Global 2022 Conference under the title ‘R, Python, and Tableau: Love Triangle,’ it explains how these three popular data analysis and visualization tools can be used together. The speakers share insights into using the advantages of R and Python in data analysis projects to effectively visualize and analyze data with Tableau. This video provides valuable information for those who want to combine data analysis and visualization tools to conduct more comprehensive analyses.”\n1\n\n\n\n\nCoding Style:\n\nR uses a more functional programming style, while Python follows an object-oriented programming approach. In R, functions and data are first-class citizens, and it often uses a pipe operator (%&gt;%), making it concise and expressive for data manipulation.\nPython relies on libraries and packages like NumPy and Pandas for data manipulation, following a more imperative style with method chaining.\n\n\nExample in R:\nRCopy code\n# Using the pipe operator to chain operations data %&gt;%   filter(age &gt; 30) %&gt;%   group_by(gender) %&gt;%   summarize(mean_income = mean(income))\nExample in Python:\npythonCopy code\n# Using Pandas to chain operations data[data['age'] &gt; 30].groupby('gender')['income'].mean()\n\nSyntax:\n\nR has a different syntax with unique operators and conventions. For instance, R uses &lt;- for assignment, and indexing starts from 1. It also employs vectorization for many operations.\nPython uses = for assignment and indexing starts from 0. It’s known for its clean and readable syntax, emphasizing indentation (whitespace) for code blocks.\n\n\nExample in R:\nRCopy code\n# R assignment x &lt;- 5 # R indexing my_vector[1]\nExample in Python:\npythonCopy code\n# Python assignment x = 5 # Python indexing my_list[0]\n\nEcosystem:\n\nR has a rich ecosystem for statistical analysis and visualization with packages like ggplot2, dplyr, and shiny, making it a go-to language for statisticians and data scientists.\nPython has a broader ecosystem beyond data science, including web development, machine learning, and automation. It is known for libraries like TensorFlow, Scikit-Learn, Django, and Flask.\n\n\nExample in R (using ggplot2 for plotting):\nRCopy code\nlibrary(ggplot2) ggplot(data, aes(x=age, y=income, color=gender)) + geom_point()\nExample in Python (using Matplotlib for plotting):\npythonCopy code\nimport matplotlib.pyplot as plt plt.scatter(data['age'], data['income'], c=data['gender']) plt.show()\nThese are some of the key differences between R and Python. The choice between the two depends on the specific use case and personal preference, as both languages have their strengths and weaknesses.\n2"
+  },
+  {
+    "objectID": "assignments/assignment-1.html#a",
+    "href": "assignments/assignment-1.html#a",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "This video discusses the effective integration of R, Python, and Tableau. Presented at the RStudio Global 2022 Conference under the title ‘R, Python, and Tableau: Love Triangle,’ it explains how these three popular data analysis and visualization tools can be used together. The speakers share insights into using the advantages of R and Python in data analysis projects to effectively visualize and analyze data with Tableau. This video provides valuable information for those who want to combine data analysis and visualization tools to conduct more comprehensive analyses.”\n1"
+  },
+  {
+    "objectID": "assignments/assignment-1.html#b",
+    "href": "assignments/assignment-1.html#b",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "Coding Style:\n\nR uses a more functional programming style, while Python follows an object-oriented programming approach. In R, functions and data are first-class citizens, and it often uses a pipe operator (%&gt;%), making it concise and expressive for data manipulation.\nPython relies on libraries and packages like NumPy and Pandas for data manipulation, following a more imperative style with method chaining.\n\n\nExample in R:\nRCopy code\n# Using the pipe operator to chain operations data %&gt;%   filter(age &gt; 30) %&gt;%   group_by(gender) %&gt;%   summarize(mean_income = mean(income))\nExample in Python:\npythonCopy code\n# Using Pandas to chain operations data[data['age'] &gt; 30].groupby('gender')['income'].mean()\n\nSyntax:\n\nR has a different syntax with unique operators and conventions. For instance, R uses &lt;- for assignment, and indexing starts from 1. It also employs vectorization for many operations.\nPython uses = for assignment and indexing starts from 0. It’s known for its clean and readable syntax, emphasizing indentation (whitespace) for code blocks.\n\n\nExample in R:\nRCopy code\n# R assignment x &lt;- 5 # R indexing my_vector[1]\nExample in Python:\npythonCopy code\n# Python assignment x = 5 # Python indexing my_list[0]\n\nEcosystem:\n\nR has a rich ecosystem for statistical analysis and visualization with packages like ggplot2, dplyr, and shiny, making it a go-to language for statisticians and data scientists.\nPython has a broader ecosystem beyond data science, including web development, machine learning, and automation. It is known for libraries like TensorFlow, Scikit-Learn, Django, and Flask.\n\n\nExample in R (using ggplot2 for plotting):\nRCopy code\nlibrary(ggplot2) ggplot(data, aes(x=age, y=income, color=gender)) + geom_point()\nExample in Python (using Matplotlib for plotting):\npythonCopy code\nimport matplotlib.pyplot as plt plt.scatter(data['age'], data['income'], c=data['gender']) plt.show()\nThese are some of the key differences between R and Python. The choice between the two depends on the specific use case and personal preference, as both languages have their strengths and weaknesses.\n2"
+  },
+  {
+    "objectID": "assignments/assignment-1.html#footnotes",
+    "href": "assignments/assignment-1.html#footnotes",
+    "title": "Assignment 1",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nChatgbt↩︎\nChatgbt is used in section b↩︎"
   },
   {
     "objectID": "about.html",
@@ -42,25 +70,18 @@
     "text": "Internships\n\nFirm Nurus, position Summer Internshıp, year 2023"
   },
   {
-    "objectID": "assignments/assignment-1.html",
-    "href": "assignments/assignment-1.html",
-    "title": "Assignment 1",
+    "objectID": "assignments/assignment-2.html",
+    "href": "assignments/assignment-2.html",
+    "title": "Assignment 2",
     "section": "",
-    "text": "My first assignment has 3 parts.\n\n\nThis video discusses the effective integration of R, Python, and Tableau. Presented at the RStudio Global 2022 Conference under the title ‘R, Python, and Tableau: Love Triangle,’ it explains how these three popular data analysis and visualization tools can be used together. The speakers share insights into using the advantages of R and Python in data analysis projects to effectively visualize and analyze data with Tableau. This video provides valuable information for those who want to combine data analysis and visualization tools to conduct more comprehensive analyses.”\n1\n\n\n\n\nCoding Style:\n\nR uses a more functional programming style, while Python follows an object-oriented programming approach. In R, functions and data are first-class citizens, and it often uses a pipe operator (%&gt;%), making it concise and expressive for data manipulation.\nPython relies on libraries and packages like NumPy and Pandas for data manipulation, following a more imperative style with method chaining.\n\n\nExample in R:\nRCopy code\n# Using the pipe operator to chain operations data %&gt;%   filter(age &gt; 30) %&gt;%   group_by(gender) %&gt;%   summarize(mean_income = mean(income))\nExample in Python:\npythonCopy code\n# Using Pandas to chain operations data[data['age'] &gt; 30].groupby('gender')['income'].mean()\n\nSyntax:\n\nR has a different syntax with unique operators and conventions. For instance, R uses &lt;- for assignment, and indexing starts from 1. It also employs vectorization for many operations.\nPython uses = for assignment and indexing starts from 0. It’s known for its clean and readable syntax, emphasizing indentation (whitespace) for code blocks.\n\n\nExample in R:\nRCopy code\n# R assignment x &lt;- 5 # R indexing my_vector[1]\nExample in Python:\npythonCopy code\n# Python assignment x = 5 # Python indexing my_list[0]\n\nEcosystem:\n\nR has a rich ecosystem for statistical analysis and visualization with packages like ggplot2, dplyr, and shiny, making it a go-to language for statisticians and data scientists.\nPython has a broader ecosystem beyond data science, including web development, machine learning, and automation. It is known for libraries like TensorFlow, Scikit-Learn, Django, and Flask.\n\n\nExample in R (using ggplot2 for plotting):\nRCopy code\nlibrary(ggplot2) ggplot(data, aes(x=age, y=income, color=gender)) + geom_point()\nExample in Python (using Matplotlib for plotting):\npythonCopy code\nimport matplotlib.pyplot as plt plt.scatter(data['age'], data['income'], c=data['gender']) plt.show()\nThese are some of the key differences between R and Python. The choice between the two depends on the specific use case and personal preference, as both languages have their strengths and weaknesses.\n2"
+    "text": "Assignment 2\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "assignments/assignment-1.html#a",
-    "href": "assignments/assignment-1.html#a",
-    "title": "Assignment 1",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to My Analytics Lab",
     "section": "",
-    "text": "This video discusses the effective integration of R, Python, and Tableau. Presented at the RStudio Global 2022 Conference under the title ‘R, Python, and Tableau: Love Triangle,’ it explains how these three popular data analysis and visualization tools can be used together. The speakers share insights into using the advantages of R and Python in data analysis projects to effectively visualize and analyze data with Tableau. This video provides valuable information for those who want to combine data analysis and visualization tools to conduct more comprehensive analyses.”\n1"
-  },
-  {
-    "objectID": "assignments.html",
-    "href": "assignments.html",
-    "title": "My Assignments",
-    "section": "",
-    "text": "On this page, I showcase the assignment I conducted for the Fall 2023 EMU 430 Data Analytics course.\nPlease use left menu to navigate through my assignments.\nThe most recent update to this page was made on Nowember 3, 2023\n\n\n\n Back to top"
+    "text": "Hello! My name is Yasin DURAN.\nThis is my personal webpage.\nPlease stay tuned to follow my works on data analytics, blog posts, and more.\nThis is our template.\n\n\n\n Back to top"
   },
   {
     "objectID": "posts.html",
@@ -68,19 +89,5 @@
     "title": "My Blog",
     "section": "",
     "text": "This page is under construction.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "assignments/assignment-1.html#footnotes",
-    "href": "assignments/assignment-1.html#footnotes",
-    "title": "Assignment 1",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nChatgbt↩︎\nChatgbt is used in section b↩︎"
-  },
-  {
-    "objectID": "assignments/assignment-1.html#b",
-    "href": "assignments/assignment-1.html#b",
-    "title": "Assignment 1",
-    "section": "",
-    "text": "Coding Style:\n\nR uses a more functional programming style, while Python follows an object-oriented programming approach. In R, functions and data are first-class citizens, and it often uses a pipe operator (%&gt;%), making it concise and expressive for data manipulation.\nPython relies on libraries and packages like NumPy and Pandas for data manipulation, following a more imperative style with method chaining.\n\n\nExample in R:\nRCopy code\n# Using the pipe operator to chain operations data %&gt;%   filter(age &gt; 30) %&gt;%   group_by(gender) %&gt;%   summarize(mean_income = mean(income))\nExample in Python:\npythonCopy code\n# Using Pandas to chain operations data[data['age'] &gt; 30].groupby('gender')['income'].mean()\n\nSyntax:\n\nR has a different syntax with unique operators and conventions. For instance, R uses &lt;- for assignment, and indexing starts from 1. It also employs vectorization for many operations.\nPython uses = for assignment and indexing starts from 0. It’s known for its clean and readable syntax, emphasizing indentation (whitespace) for code blocks.\n\n\nExample in R:\nRCopy code\n# R assignment x &lt;- 5 # R indexing my_vector[1]\nExample in Python:\npythonCopy code\n# Python assignment x = 5 # Python indexing my_list[0]\n\nEcosystem:\n\nR has a rich ecosystem for statistical analysis and visualization with packages like ggplot2, dplyr, and shiny, making it a go-to language for statisticians and data scientists.\nPython has a broader ecosystem beyond data science, including web development, machine learning, and automation. It is known for libraries like TensorFlow, Scikit-Learn, Django, and Flask.\n\n\nExample in R (using ggplot2 for plotting):\nRCopy code\nlibrary(ggplot2) ggplot(data, aes(x=age, y=income, color=gender)) + geom_point()\nExample in Python (using Matplotlib for plotting):\npythonCopy code\nimport matplotlib.pyplot as plt plt.scatter(data['age'], data['income'], c=data['gender']) plt.show()\nThese are some of the key differences between R and Python. The choice between the two depends on the specific use case and personal preference, as both languages have their strengths and weaknesses.\n2"
   }
 ]
