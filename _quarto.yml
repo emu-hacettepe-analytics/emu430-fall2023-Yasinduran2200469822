@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "[Student/Group Full Name]'s Analytics Lab"
+  title: "Yasin DURAN's Analytics Lab"
   navbar:
     search: true
     left:
@@ -22,11 +22,9 @@ website:
             
     tools:
       - icon: github
-        href: https://twitter.com
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/Yasinduran2200469822
       - icon: linkedin
-        href: https://linkedin.com
+        href: https://www.linkedin.com/in/yasinduran06/
 
   sidebar:
     - title: "Assignments"
@@ -46,7 +44,7 @@ format:
     toc: true
     toc-location: left
     theme: 
-      light: pulse 
+      light: lux
       dark: superhero
     css: styles.css
 

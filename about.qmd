@@ -22,6 +22,10 @@ sidebar: false
 # Projects
 
 1.  Firm Nurus,Subject Lean Production, year 2023
+about.qmd
+
+2.  Firm Tai, Subject Lift Up, year 2023
+main
 
 # Competencies
 
