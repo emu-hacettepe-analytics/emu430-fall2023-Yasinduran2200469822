@@ -3,7 +3,11 @@ title: "Our Course Project"
 sidebar: false 
 ---
 
+about.qmd
+I'm honored to be a member of the \[EMUTrend_explorers\] project team.
+
 I'm honored to be a member of the \[EMUTrend_explorer\] project team
+main
 
 Below, you'll find a brief summary of our project. To access a detailed project description, please go to [our lovely project](https://github.com/emu-hacettepe-analytics/emu430-fall2023-team-emutrend_explorers) .
 
