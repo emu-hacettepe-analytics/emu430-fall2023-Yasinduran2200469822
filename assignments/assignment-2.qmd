@@ -1,9 +1,244 @@
 ---
 title: "Assignment 2"
+format:
+  html:
+    code-fold: true
+    code-summary: "Show the code"
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
-# Assignment 2
+### Question 1
 
-```{r}
-1 + 1
+> *we have 2 links pre 2010 and after 2010,
+> we combine them in one vector.*
+
+```{r, message=FALSE, results='asis'}
+
+library(tidyverse)
+library(stringr)
+library(rvest)
+library(ggplot2)
+library(knitr)
+library(reshape2)
+
+IMDB_1 <- "https://www.imdb.com/search/title/?title_type=feature&release_date=2010-01-01,2023-12-31&num_votes=2500,&country_of_origin=TR&count=250"
+IMDB_2 <- "https://www.imdb.com/search/title/?title_type=feature&release_date=,2009-12-31&num_votes=2500,&country_of_origin=TR&count=250"
+IMDB_vector<- c(IMDB_1,IMDB_2)
+
+
+```
+
+
+### Question 2
+
+> *Creating Web Scraping: Title, Year,
+> Duration, Rating, Votes*
+
+```{r,message=FALSE}
+
+
+table_titles <- c()
+table_years <- c()
+table_durations <- c()
+table_ratings <- c()
+table_votes <- c()
+
+for(url in IMDB_vector){
+  page = read_html(url)
+  
+  title_names <- page |> html_nodes('.ipc-title__text')
+  title_names <- html_text(title_names)
+  title_names <- tail(head(title_names,-1),-1)
+  title_names <- str_split(title_names, " ", n=2)
+  title_names <- unlist(lapply(title_names, function(x) {x[2]}))
+  
+  year <- page |> html_nodes(".sc-43986a27-7.dBkaPT.dli-title-metadata")
+  year <- html_text(year)
+  year <- substr(year, 1, 4)
+  year <- as.numeric(year)
+  
+  duration <- page |> html_nodes(".sc-1b7x5y9-6.gwfzJB.dli-watch-bar") %>%
+  html_text() %>%
+  str_extract_all("\\d+") %>%
+  lapply(function(x) as.numeric(x)) %>%
+  unlist() %>%
+  sum()
+  
+  rating <- page |> html_nodes(".ipc-rating-star.ipc-rating-star--base.ipc-rating-star--imdb.ratingGroup--imdb-rating")
+  rating <- html_text(rating)
+  rating <- substr(rating, 1, 3)
+  rating <- as.numeric(rating)
+  
+  vote <- page |> html_nodes(".sc-53c98e73-0.kRnqtn")
+  vote <- html_text(vote)
+  vote <- sub("Votes", "" ,vote)
+  vote <- sub(",", "", vote)
+  vote <- as.numeric(vote)
+  
+  Titles <- append(table_titles,title_names)
+  Years <- append(table_years, year)
+  Durations <- append(table_durations, duration)
+  Ratings <- append(table_ratings, rating)
+  Votes <- append(table_votes, vote)
+  
+}
+
+movies_df <- data.frame(Titles, Years, Durations, Ratings, Votes)
+kable(head(movies_df,10), caption = "Movies Dataframe")
+```
+
+
+### Question 3
+
+> a)  
+>
+>     > *Arrange your data frame in descending order by Rating. Present
+>     > the top 5 and bottom 5 movies based on user ratings. Have you
+>     > watched any of these movies? Do you agree or disagree with their
+>     > current IMDb Ratings?*
+
+```{r, message=FALSE}
+movies_df <- movies_df[order(movies_df$Ratings, decreasing = TRUE),]
+```
+
+##### Top 5 movies based on user ratings.
+
+```{r, message=FALSE}
+kable(head(movies_df, 5), caption = "Top 5 Movies Based On User Ratings.")
+```
+
+I have watched all the movies listed in the top 5. They are films that I can watch repeatedly without getting bored. However, I don't think they deserve to be in the top 5.
+
+##### Bottom 5 movies based on user ratings.
+
+```{r, message=FALSE}
+kable(tail(movies_df, 5), caption = "Bottom 5 Movies Based On User Ratings.")
+```
+
+I haven't watched any of the movies mentioned in the lower ranks. Honestly, I believe they deserve their places in the ranking.
+
+> b)  
+>
+>     > *Showing favourite films and evalute them
+> *
+
+##### My top 5 list is below:
+
+1.  [Nefes:Vatan Sağolsun](https://www.imdb.com/title/tt1171701/)
+2.  [Dağ](https://www.imdb.com/title/tt2471640/)
+3.  [Dağ 2](https://www.imdb.com/title/tt5813916/)
+4.  [Babam ve Oğlum](https://www.imdb.com/title/tt0476735/)
+5.  [Kader](https://www.imdb.com/title/tt0875595/)
+
+This list contains my favourite movies. If I choose 2 movies from this list, these movies would be Nefes:Vatan Sağolsun and Babam ve Oğlum.
+
+
+
+> c)  
+>
+>     > *Considering that audience rating is a crucial indicator of
+>     > movie quality, what can* *you infer about the average ratings of
+>     > Turkish movies over the years? Calculate yearly* *rating
+>     > averages and plot them as a scatter plot. Similarly, plot the
+>     > number of* *movies over the years. You might observe that using
+>     > yearly averages could be misleading* *due to the increasing
+>     > number of movies each year. As an alternative solution,* *plot
+>     > box plots of ratings over the years (each year having a box plot
+>     > showing statistics* *about the ratings of movies in that year).
+>     > What insights do you gather from the box plot?*
+
+```{r, message= FALSE}
+# Assuming 'movies' data frame is available with columns: Titles, Years, Ratings, Votes
+
+library(tidyverse)
+library(ggplot2)
+
+# Calculate yearly rating averages
+average_ratings <- movies_df %>%
+  group_by(Years) %>%
+  summarise(Average_Rating = mean(Ratings),
+            Number_of_Movies = n())
+
+# Scatter plot for yearly rating averages
+ggplot(average_ratings, aes(x = Years, y = Average_Rating, size = Number_of_Movies)) +
+  geom_point() +
+  labs(title = "Yearly Average Ratings of Turkish Movies",
+       x = "Years",
+       y = "Average Rating") +
+  theme_minimal()
+
+# Number of movies over the years
+ggplot(average_ratings, aes(x = Years, y = Number_of_Movies)) +
+  geom_bar(stat = "identity", fill = "blue") +
+  labs(title = "Number of Turkish Movies Released Each Year",
+       x = "Years",
+       y = "Number of Movies") +
+  theme_minimal()
+
+# Box plots of ratings over the years
+ggplot(movies_df, aes(x = as.factor(Years), y = Ratings)) +
+  geom_boxplot(fill = "blue") +
+  labs(title = "Box Plots of Ratings of Turkish Movies Over the Years",
+       x = "Years",
+       y = "Ratings") +
+  theme_minimal()
+```
+
+> d)  
+>
+>     > *Do you believe there is a relationship between the number of
+>     > votes a movie received and its rating?* *Investigate the
+>     > correlation between Votes and Ratings.*
+
+```{r, message=FALSE}
+corr_rating_vote = cor(movies_df$Ratings, movies_df$Votes)
+corr_rating_vote
+```
+> e)  
+>
+>     > *Do you believe there is a relationship between a movie's
+>     > duration and its rating?*
+
+```{r, message=FALSE}
+corr_duration_rating = cor(movies_df$Durations, movies_df$Ratings)
+corr_duration_rating
+```
+As we see, there is no relationship between duration and rating.
+
+
+#### Question 4
+
+
+> a)  
+>
+>     > *Use IMDb's Advanced Title Search interface with The Title Type
+>     > set to "Movie" only,* *the Country set to "Turkey" with the
+>     > option "Search country of origin only" active,* *and the Awards
+>     > & Recognation set to "IMDB Top 1000". You should find a total
+>     > of* *11 movies.*
+
+```{r, message=FALSE}
+IMDB_3 = "https://www.imdb.com/search/title/?title_type=feature&groups=top_1000&country_of_origin=TR&count=250"
+movie_name <- c()
+movie_year <- c()
+
+page = read_html(IMDB_3)
+
+title_names <- page |> html_nodes('.ipc-title__text')
+title_names <- html_text(title_names)
+title_names <- tail(head(title_names,-1),-1)
+title_names <- str_split(title_names, " ", n=2)
+title_names <- unlist(lapply(title_names, function(x) {x[2]}))
+
+year <- page|> html_nodes(".sc-43986a27-7.dBkaPT.dli-title-metadata")
+year <- html_text(year)
+year <- substr(year, 1, 4)
+year <- as.numeric(year)
+
+movie_name <- append(movie_name, title_names)
+movie_year <- append(movie_year, year)
+top1000_df <- data.frame(movie_name, movie_year)
+kable(top1000_df, caption = "Turkish movies in IMDB Top1000 without rating, duration and votes")
 ```
